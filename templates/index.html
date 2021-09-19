@@ -2,18 +2,47 @@
 <html>
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
-<script src="/static/js/index.js"></script>
+
+
 <title>EMBEBIDOS</title>
 </head>
 <body>
 
-<h1>Embebidos</h1>
-<img id="imagen" src="/static/images/iot.png" alt="user">
-<h1>Sensor:</h><h id="sensor">--</h1>
+<h1 id='T.Principal'>
+Universidad Nacional de Chimborazo
+</h1>
+
+<img id="imagen1" src="https://www.unach.edu.ec/wp-content/uploads/2021/03/logo_unach_2021-02.png" alt="user">
+
+<h1 id='Autor'>
+Juan Sebastian Ronquillo Lazo 
+</h1>
+
+<h1 id='T.Secundario'>
+Embebidos
+</h1>
+
+<img id="imagen2" src="https://embebidos-grupo6.herokuapp.com/static/images/iot.png" alt="user">
+
+<h1>
+Sensor:
+</h1>
+
+<h1 id="sensor">
+-- 
+</h1>
+
+<button id = 'Inicio' type="button" onclick="Inicio();">
+Inicio
+</button>
+
 <button id = 'LED1On'type="button" onclick="LED1_On();">
-LED1 ON!</button>
+LED1 ON!
+</button>
+
 <button id = 'LED1Off' type="button" onclick="LED1_Off();">
-LED1_OFF!</button>
+LED1 OFF!
+</button>
 
 <script>
 /*
@@ -28,5 +57,6 @@ function LED1_Off(){
 }
 */
 </script>
+<script src="/static/js/index.js"></script>
 </body>
 </html>
