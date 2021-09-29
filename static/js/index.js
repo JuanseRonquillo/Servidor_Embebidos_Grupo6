@@ -1,23 +1,26 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function LED1_On() {
+function LED_1() {
 	//alert("led on");
-	console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
-	message = new Paho.MQTT.Message("ON");
-    	message.destinationName = "juan.ronquillo@unach.edu.ec/T2";
-    	client.send(message);
-  
-}
-function LED1_Off(){	
+  message = new Paho.MQTT.Message("1");
+      message.destinationName = "juan.ronquillo@unach.edu.ec/T2";
+      client.send(message);
+  document. getElementById('Sensor_1').innerHTML='1';
+  document. getElementById('Sensor_2').innerHTML='0';
+  console.log('Se preciono el boton LED_1:');
+} 
+
+function LED_2(){	
 	//alert("led off");
-	console.log("led off");
-	message = new Paho.MQTT.Message("OFF");
+	message = new Paho.MQTT.Message("0");
     	message.destinationName = "juan.ronquillo@unach.edu.ec/T2";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
+   document. getElementById('Sensor_1').innerHTML='0';
+   document. getElementById('Sensor_2').innerHTML='1';
+  console.log('Se preciono el boton LED_2:');
 }
-
 
 
 
@@ -69,6 +72,6 @@ function LED1_Off(){
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-	  document.getElementById("sensor").innerHTML=message.payloadString;
+	  document.getElementById("Sensor_1").innerHTML=message.payloadString;
   }
   

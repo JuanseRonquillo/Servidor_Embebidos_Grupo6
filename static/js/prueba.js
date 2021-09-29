@@ -1,7 +1,12 @@
 alert('Hola desde prueba');
-document. getElementById('sensor').innerHTML='Valor';
-function LED1_On(){document. getElementById('sensor').innerHTML='Encendido';
-	console.log('Se preciono el boton Encendido:');}
+//document. getElementById('Sensor1').innerHTML='Valor';
+function LED_1(){document. getElementById('Sensor_1').innerHTML='1';
+	console.log('Se preciono el boton LED_1:');
+                 document. getElementById('Sensor_2').innerHTML='0';
+	console.log('Se preciono el boton LED_1:');}
 
-function LED1_Off(){document. getElementById('sensor').innerHTML='Apagado';
-	console.log('Se preciono el boton Apagado:');}
+function LED_2(){document. getElementById('Sensor_1').innerHTML='0';
+	console.log('Se preciono el boton LED_2:');
+                 document. getElementById('Sensor_2').innerHTML='1';
+	console.log('Se preciono el boton LED_2:');}
+	
